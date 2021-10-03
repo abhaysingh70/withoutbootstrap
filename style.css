@@ -6,6 +6,8 @@
 }
 body{
     font-family: "Poppins",sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -42,7 +44,7 @@ p{
 }
 
 .container {
-    width: 80%;
+    width: 60%;
     margin: auto;
     
 }
@@ -52,46 +54,86 @@ html{
     scroll-behavior: smooth;
 }
 /* Header Section */
-nav {
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    
-}
-nav h2 {
-    margin-left: 33px;
-    padding: 2px;
-    margin-top: -46px;
-}
-.logo-bg{
-    background-color: white;
-    float: left;
-    display: inline;
-    color: blue;
-    /* margin-top: 0px; */
-    font-size: 25px;
-    border-bottom-left-radius: 10px;
-    padding: 11px;
-    height: 71px;
-    border-bottom-right-radius: 10px;
-    background-color: white;
-    border: 1px solid white;
-}
-nav menu{
-    float: right;
-    line-height: 100px;
-    color: wheat;
+
+.dropdwn{
+    margin: 0 auto;
 
 }
-.menu a{
-    display: inline-block;
-    margin: 0 15px;
-    color: white;
-    font-weight: bold;
+nav{
+    height: 80px;
+    background: blue;
+    box-shadow: 0 10px 15px blue;
 }
-#menu-btn{
+.logo{
+    width: 80%;
+    height: auto;
+    margin-right: 30px;
+    font-size: 35px;
+    border: 1px solid;
+    color: blue;
+    background: white;
+    border-radius: 10px;
+    margin-left: 0px;
+
+}
+ nav ul{
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 30px;
+    
+}
+nav ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    display: block;
+    padding: 0 15px;
+    text-decoration: none;
+    color: white;
+    line-height: 60px;
+    font-size: 20px;
+}   
+nav ul li a:hover{
+    background: #243342;
+
+
+
+}
+nav ul ul{
+    position: absolute;
+    top: 60px;
+    display: none;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+nav ul ul li{
+    width: 150px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+}
+.checkbtn{
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none  ;
+}
+#check{
+    display: none;
+}
+
+.dropdwn .btn{
     font-size: 2.5rem;
     border-radius: .5rem;
     background: #eee;
@@ -101,9 +143,11 @@ nav menu{
     float: right;
 }
 
+
+
 /*  About */
 .about .about-image{
-    width: 45%;
+    width: 65%;
     float: right;
     margin-bottom: 30px;
 }
@@ -151,7 +195,7 @@ nav menu{
 
 .selling .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 1rem;
     padding: 20px;
 }
@@ -160,8 +204,9 @@ nav menu{
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     border: var(--border);
-    padding: 70px;
+    padding: 10px;
     border: 1px solid black;
+    margin-right: 0px;
 
 }
 
@@ -176,13 +221,11 @@ nav menu{
     flex-wrap: wrap;
 }
 .credit-left-col{
-    flex-basis: 50%;
+    flex-basis: 30%;
 
 }
 .credit-left-col img{
     width: 80%;
-    background: blue;
-    border-radius: 50%;    
 }
 .c-btn{
     padding: 15px;
@@ -224,7 +267,6 @@ padding-bottom: 1rem;
 text-shadow: var(--text-shadow);
 margin-top: 30px;
 padding: 70px;
-width: 90%;
 }
 
 .service .img{
@@ -245,7 +287,8 @@ width: 90%;
 
 .covid .left{
     flex-basis: 60%;
-    max-width: 450px;
+    max-width: 80%;
+    margin-left: 20px;
 
 }
 .covid .right{
@@ -253,10 +296,8 @@ width: 90%;
 }
 
 .covid .right img{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    background-color: blue;
+    height:100%;
+    width: 60%;
 
 }
 
@@ -280,14 +321,10 @@ width: 90%;
 .client .left img {
     height: 70%;
     width: 70%;
-    border-radius: 50%;
-    background-color: blue;
-    margin-top: 30px;
-    margin-left: 30px;
 }
 
 .client .left{
-    flex-basis: 40%;
+    flex-basis: 30%;
 }
 
 .client .right{
@@ -354,23 +391,191 @@ width: 90%;
 
 
 @media (max-width: 770px){
-    .menu{
-        display: none;
+   
+    .btn{
+        margin-top: 40px;
+        position: relative;
+        flex-direction: column;
+    
+    }
+    .btn a{
+        margin-bottom: 30px;
+        margin-left: 30px;
+        margin-top: 444px;
     }
     .about-content{
         flex-basis: 100%;
         margin: 50px 100px;
+        margin-left: 30px;
+        justify-content: center;
     }
 
     .abot-image{
-        flex-basis: 40%;
+        flex-basis: 100%;
+        width: 350px;
+        position: relative;
     }
     .face-sz{
         height: 329px;
         margin-left: 0px;
+    
     }
+    .about .Line{
+        display: contents;
+
+    }
+    
+
 
 }
+@media only screen and (max-width: 850px){
+    .navbar{
+        padding: 0;
+        margin-left: 50px;
+        justify-content: center;
+    }
+    .navbar ul li{
+        margin-top: px;
+    }
+    .logo{
+      margin-right: 10px;
+      position: absolute;
+      align-items: flex-start;
+      text-align: center;
+      display: none;
+      
+      
+        
+    }
+    
+    .nav-link{
+        flex-direction: column;
+        width: 100%;
+        height: 120vh;
+        justify-content: center;
+        margin-top: -900px;
+        background:#484872;
+        
+
+    }
+    
+    .nnn{
+        flex-direction: column;
+        width: 100%;
+        height: 5vh;
+        margin-left: 120px;
+        
+    }
+    .nnn li{
+        margin-bottom: 600px;
+    }
+    .nav-link li{
+        margin: 3px 30px;
+    }
+    .nav-ink ul li{
+        display: list-menu;
+    }
+    .nav-link ul ul{
+        display: list-item;
+    }
+    
+    .checkbtn{
+        display: block;
+    }
+    
+    .mobile-menu{
+        margin-top: 0px;
+
+    }
+
+ 
+    .credit{
+        display: block;
+    }
+    .credit-row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    
+    .credit-left-col{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        flex-basis: 100%;
+        text-align: center;
+
+    }
+    .credit-left-col img{
+        width: 30%;
+        position: relative;
+    }
+    .c-btn{
+        margin-top: 20px;
+    }
+    .covid{
+        padding: 0;
+        margin: 0;
+        display:  block
+        ;
+    }
+    .covid .right{
+        flex-basis: 40%;
+    }
+    .covid .ins{
+        display: grid;
+        width: 100%;
+        text-align: center;
+
+    }
+    .covid .right{
+        flex-basis: 60%;
+        width: 70%;
+        height: auto;
+    }
+    
+    .covid .right img{
+        height:100%;
+        width: 30%;
+        flex-basis: 40%;
+        position: relative;
+    
+    }
+    .client .kai{
+        display: grid;
+        
+    }
+    .client .right{
+        justify-content: center;
+        text-align: center;
+    }
+    
+        
+
+    
+    
+    
+    
+    
+    
+     
+   
+
+    
+    
+    
+    
+    
+
+}
+@media (max-width: 858px) { 
+    
+    
+      
+}
+
 @media (min-width: 576px) { 
       
  }
