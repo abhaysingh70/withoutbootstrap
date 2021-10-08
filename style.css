@@ -4,8 +4,9 @@
     box-sizing: border-box;
 
 }
+
 body{
-    font-family: "Poppins",sans-serif;
+    font-family: "Roboto",sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -52,6 +53,8 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
 }
 /* Header Section */
 
@@ -241,6 +244,8 @@ nav ul ul ul li{
     padding-bottom: 1rem;
     text-shadow: var(--text-shadow);
     margin-top: 30px;
+    position: relative;
+    max-width: 100%;
 }
  
 .service .service-box {
@@ -301,12 +306,70 @@ padding: 70px;
 
 }
 
-.ques .head{
-    text-align: center;
-    padding-bottom: 1rem;
-    text-shadow: var(--text-shadow);
-    margin-top: 30px;
 
+.cont{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+
+.accordion-item{
+    background-color: white;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+    border: 1px solid;
+    box-shadow: .5rem 2px .5rem darkslategrey;
+}
+.accordion-link{
+    font-size: 1rem;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+    font-family: inherit;
+    margin-left: 7px;
+    font: bold;
+
+    
+    
+}
+.accordion-link i{
+    
+    padding: .5rem;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 650ms;
+    
+}
+.answer::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 90%;
+    top: 50%;
+    transform: translate(-50%);
+}
+.answer p{
+    font-size: rem;
+    padding: 1rem;
+}
+.accordion-item:target .answer{
+    max-height: 18rem;
+}
+.accordion-item:target .accordion-link .i{
+    display: none;
 }
 
 .client .kai {
@@ -443,24 +506,34 @@ padding: 70px;
       align-items: flex-start;
       text-align: center;
       display: none;
+      padding-left: 30px;
       
       
         
     }
+    nav ul{
+        float: right;
+    }
+    nav ul li, nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+    
     
     .nav-link{
         flex-direction: column;
         width: 100%;
-        height: 120vh;
+        height: 100vh;
         justify-content: center;
         margin-top: -900px;
         background:#484872;
+        text-align: center;
         
 
     }
     
     .nnn{
-        flex-direction: column;
+        flex-direction: column ;
         width: 100%;
         height: 5vh;
         margin-left: 120px;
@@ -477,6 +550,7 @@ padding: 70px;
     }
     .nav-link ul ul{
         display: list-item;
+        position: static;
     }
     
     .checkbtn{
@@ -551,6 +625,26 @@ padding: 70px;
         justify-content: center;
         text-align: center;
     }
+    .service{
+        max-width: 100%;
+        
+    }
+    .ser{
+        display: grid;
+        margin-left: 20px;
+        justify-content: center;
+
+    }
+    .ser h1, h4,p{
+        display: block;
+        position: relative;
+        text-align: justify;
+    }
+    
+
+    
+
+
     
         
 
