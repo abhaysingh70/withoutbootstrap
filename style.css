@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
 
 }
 
@@ -58,71 +59,88 @@ html{
 }
 /* Header Section */
 
-.dropdwn{
-    margin: 0 auto;
-
-}
 nav{
-    height: 80px;
     background: blue;
-    box-shadow: 0 10px 15px blue;
+    font-family: 'Poppins' sans-serif;
 }
-.logo{
-    width: 80%;
-    height: auto;
-    margin-right: 30px;
-    font-size: 35px;
-    border: 1px solid;
-    color: blue;
-    background: white;
-    border-radius: 10px;
-    margin-left: 0px;
-
+nav::after{
+    content: '';
+    clear: both;
+    display: table;
 }
- nav ul{
-    padding: 0;
-    margin: 0;
+nav ul{
     float: right;
-    margin-right: 30px;
-    
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+
 }
 nav ul li{
-    position: relative;
-    list-style: none;
+    
     display: inline-block;
+    line-height: 20px;
+    
+
 }
+
 nav ul li a{
-    display: block;
-    padding: 0 15px;
-    text-decoration: none;
     color: white;
-    line-height: 60px;
-    font-size: 20px;
-}   
-nav ul li a:hover{
-    background: #243342;
-
-
-
+    line-height: 0px;
+    font-size: 18px;
+    padding:  30px;
+    
 }
-nav ul ul{
+nav ul li a:hover{
+    color: cyan;
+    box-shadow: 0 0 5px #33ffff;
+}
+nav ul ul {
     position: absolute;
-    top: 60px;
-    display: none;
+    top: 30px;
+    opacity: 0;
+    visibility:hidden ;
+    transition:  top .3s;
+
+    
 }
 nav ul li:hover > ul{
-    display: block;
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
 }
 nav ul ul li{
+    position: relative;
+    margin: px;
     width: 150px;
-    float: none;
     display: list-item;
-    position: relative;
+    float: none;
+    padding: 5px;
 }
-nav ul ul ul li{
-    position: relative;
-    top: -60px;
+nav .log{
+    float: left;
+    color: blue;
+    border-radius: 7px;
+    font-size: 27px;
+    font-weight: 600;
+    padding-left: 60px;
+    background: white;
+    border: 1px solid black;
+    padding: 13px 15px;
+    margin-left: 30px;
+
+
 }
+.show, input{
+    display: none;
+}
+.icon{
+    display: none;
+}
+
+
+
+
+
 .checkbtn{
     cursor: pointer;
     color: white;
@@ -488,79 +506,80 @@ padding: 70px;
 
     }
     
+    
 
 
 }
-@media only screen and (max-width: 850px){
-    .navbar{
-        padding: 0;
-        margin-left: 50px;
-        justify-content: center;
-    }
-    .navbar ul li{
-        margin-top: px;
-    }
-    .logo{
-      margin-right: 10px;
-      position: absolute;
-      align-items: flex-start;
-      text-align: center;
-      display: none;
-      padding-left: 30px;
-      
-      
-        
-    }
+
+@media all  and (max-width: 968px){
     nav ul{
-        float: right;
+        margin-right: 0px;
+        float: left;
+    }
+    nav .log{
+        padding-right: 20px;
     }
     nav ul li, nav ul ul li{
         display: block;
         width: 100%;
+        padding: 10px;
     }
-    
-    
-    .nav-link{
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        margin-top: -900px;
-        background:#484872;
-        text-align: center;
-        
-
-    }
-    
-    .nnn{
-        flex-direction: column ;
-        width: 100%;
-        height: 5vh;
-        margin-left: 120px;
-        
-    }
-    .nnn li{
-        margin-bottom: 600px;
-    }
-    .nav-link li{
-        margin: 3px 30px;
-    }
-    .nav-ink ul li{
-        display: list-menu;
-    }
-    .nav-link ul ul{
-        display: list-item;
+    nav ul ul{
+        top: 70px;
         position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
     }
+    nav ul ul a{
+        padding-left: 40px;
+    }
+    nav ul ul li{
+        border-bottom: 0px;
+    }
+    .show{
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 30px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    
+    
+    .show:hover{
+        color: cyan;
+    }
+    .icon{
+        display: block;
+        color: white;
+        position: absolute;
+        font-size: 25px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    nav ul li a:hover{
+        box-shadow: none;
+    }
+    .show + a, ul{
+        display: none;
+    }
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+}
+    
+@media only screen and (max-width: 850px){
+
+   
     
     .checkbtn{
         display: block;
     }
     
-    .mobile-menu{
-        margin-top: 0px;
-
-    }
+    
 
  
     .credit{
